@@ -11,8 +11,6 @@ with open(training_file, mode='rb') as f:
   train = pickle.load(f)
 
 X_train, y_train = train['features'], train['labels']
-X_train = X_train[:1000]
-y_train = y_train[:1000]
 
 # TODO: Split data into training and validation sets.
 X_train, X_validation, y_train, y_validation = train_test_split(X_train, y_train, test_size=0.2, random_state=42)
